@@ -55,8 +55,8 @@ As soon as the visitor comes to the landing page through your Tweet, the leadsou
 The lead source information is stored in your visitor's browser every time they come through a campaign.  To retrieve the lead sources, simply go to Settings->LeadSource Tracker and select the page (usually your order form or registration page) and click save.  This page will retrieve the lead sources 
 and populate the URL with GET parameters.  In your contact form, populate hidden fields with the GET parameters that show up in the URL: 
 
-<input type="hidden" name="first_source" value="&lt;?php echo $_GET['ldsrc_0'];?&gt;">
-<input type="hidden" name="last_source" value="&lt;?php echo $_GET['ldsrc_n'];?&gt;>">
+&lt;input type="hidden" name="first_source" value="&lt;?php echo $_GET['ldsrc_0'];?&gt;">
+&lt;input type="hidden" name="last_source" value="&lt;?php echo $_GET['ldsrc_n'];?&gt;>">
 
 where ldsrc_0 is the first campaign the visitor ever saw,
 and ldsrc_n is the last campaign the visitor ever saw.
