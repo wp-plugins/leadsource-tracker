@@ -72,11 +72,11 @@ the first (ldsrc_0), last (ldsrc_n) and everything in between (ldsrc_1 .. ldsrc_
 
 == Screenshots ==
 
-1. `/assets/screenshot-1.png`
-2. `/assets/screenshot-2.png`
-3. `/assets/screenshot-3.png`
-4. `/assets/screenshot-4.png`
-5. `/assets/screenshot-5.png`
+1. Define the page on your wordpress website which will retrieve the campaign tags stored in the visitors browser.  Most often this is the order or registration, or contact page.
+2. Tag your online (or offline) inbound links with your marketing activity or campaign name.  Simply append ?ldsrc=[Campaign Name] after the landing page.  In this example, the inbound link was from a tradeshow banner ad and the landing page was the homepage. "Tradeshow_VMworld2015" is stored on the visitor's browser so that it can be retrieved when he or she registers on your website.
+3. Let's say the visitor came back through ANOTHER campaign after the Tradeshow_VMworld2015, in this case he or she came back through Google_Adwords.  "Google_Adwords" is now stored on the visitor's browser in ADDITION to "Tradeshow_VMworld2015".  
+4. When the visitor finally registers or orders off your website, "Tradshow_VMworld2015" and "Google_Adwords" are retrieved from the visitor's browser and is made available as GET parameters in the URL.  Allowing you to populate the information in hidden form fields for storage.  Now you know that "John Doe", was first touched by Tradeshow_VMworld2015, and the last touch before registration was Google_Adwords!
+5. Example using Gravity Forms on pulling campaigns as GET parameters into hidden form fields.
 
 == Changelog ==
 
