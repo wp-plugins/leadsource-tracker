@@ -56,7 +56,7 @@ The lead source information is stored in your visitor's browser every time they 
 and populate the URL with GET parameters.  In your contact form, populate hidden fields with the GET parameters that show up in the URL: 
 
 &lt;input type="hidden" name="first_source" value="&lt;?php echo $_GET['ldsrc_0'];?&gt;">
-&lt;input type="hidden" name="last_source" value="&lt;?php echo $_GET['ldsrc_n'];?&gt;>">
+&lt;input type="hidden" name="last_source" value="&lt;?php echo $_GET['ldsrc_n'];?&gt;">
 
 where ldsrc_0 is the first campaign the visitor ever saw,
 and ldsrc_n is the last campaign the visitor ever saw.
