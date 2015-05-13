@@ -55,8 +55,8 @@ As soon as the visitor comes to the landing page through your Tweet, the leadsou
 The lead source information is stored in your visitor's browser every time they come through a campaign.  To retrieve the lead sources, simply go to Settings->LeadSource Tracker and select the page (usually your order form or registration page) and click save.  This page will retrieve the lead sources 
 and populate the URL with GET parameters.  In your contact form, populate hidden fields with the GET parameters that show up in the URL: 
 
-<input type="hidden" name="first_source" value="<?php echo $_GET['ldsrc_0'];?>">
-<input type="hidden" name="last_source" value="<?php echo $_GET['ldsrc_n'];?>">
+<input type="hidden" name="first_source" value="&lt;?php echo $_GET['ldsrc_0'];?&gt;">
+<input type="hidden" name="last_source" value="&lt;?php echo $_GET['ldsrc_n'];?&gt;>">
 
 where ldsrc_0 is the first campaign the visitor ever saw,
 and ldsrc_n is the last campaign the visitor ever saw.
@@ -76,7 +76,8 @@ the first (ldsrc_0), last (ldsrc_n) and everything in between (ldsrc_1 .. ldsrc_
 2. Tag your online (or offline) inbound links with your marketing activity or campaign name.  Simply append ?ldsrc=[Campaign Name] after the landing page.  In this example, the inbound link was from a tradeshow banner ad and the landing page was the homepage. "Tradeshow_VMworld2015" is stored on the visitor's browser so that it can be retrieved when he or she registers on your website.
 3. Let's say the visitor came back through ANOTHER campaign after the Tradeshow_VMworld2015, in this case he or she came back through Google_Adwords.  "Google_Adwords" is now stored on the visitor's browser in ADDITION to "Tradeshow_VMworld2015".  
 4. When the visitor finally registers or orders off your website, "Tradshow_VMworld2015" and "Google_Adwords" are retrieved from the visitor's browser and is made available as GET parameters in the URL.  Allowing you to populate the information in hidden form fields for storage.  Now you know that "John Doe", was first touched by Tradeshow_VMworld2015, and the last touch before registration was Google_Adwords!
-5. Example using Gravity Forms on pulling campaigns as GET parameters into hidden form fields.
+5. Example using Gravity Forms on pulling campaigns as GET parameters for FIRST TOUCH campaigns into hidden form fields.
+6. Another example using Gravity Forms on pulling campaigns as GET parameters for LAST TOUCH campaigns into hidden form fields.
 
 == Changelog ==
 
