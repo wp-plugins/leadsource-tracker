@@ -2,7 +2,7 @@
 Contributors: cchui
 Donate link: http://www.leadsourcetracker.com
 Requires at least: 3.7
-Tested up to: 4.2.1
+Tested up to: 4.2.2
 Stable tag: trunk
 Tags: lead source, leadsource, multiple lead source, marketing attribution, campaign attribution, lead source attribution
 License: GPLv2 or later
@@ -49,6 +49,27 @@ promo/?ldsrc=twitter_promo
 As soon as the visitor comes to the landing page through your Tweet, the leadsource "twitter_promo" will be stored in their browser.  Any subsequent campaigns that the visitor comes through will be stored as well.  When the visitor goes to your order / registration page that you specified in Settings->Leadsource Tracker, "twitter_promo", and any subsequent campaigns will be retrieved as GET parameters on that page, which can be easily placed as hidden fields in your registration forms for storage and reporting.
 
 
+= What happens when the visitor gets to the tagged landing page, then navigates away?  Do I lose the lead source? =
+
+NO.  The lead source information is STORED in the visitor's browser.  It doesn't matter that they don't register or order right away when they click through to your landing page.  If the user goes away and comes back to your home page on their own weeks or months later, then registers on the page you specify in the leadsource tracker settings, the campaigns will be retrieved.
+
+
+= What is the best practice for tagging? = 
+
+Put the name of the lead source (WHERE they came from), NOT the activity on the website. We have seen MANY people put things like "free_trial", and "whitepaper_download", and "website_download".  These descriptions tell you what they did on the website, not WHERE they came from.  
+
+Proper examples of tagging the "ldsrc" parameter are:  "Google_Adwords", "Adroll_Retargeting", "Emailblast_2015-04-01", "PressRelease_2015-01-31", "Gartner_Profile_Page" etc. - these are all external sources from the website.
+
+
+= Can I use the tags for offline campaigns? =
+
+YES.  The best practice to achieve offline campaign tracking is to offer a special promotion or coupon on a specific page.  For example if you have a print ad on "Popular Computers Magazine" then create the ad with a link for the special giveaway or promo:  http://www.yourwebsite.com/landingpage/?ldsrc=PCMag_Promo_20150401
+
+
+= I'm using Google UTM, isn't that better? =
+
+Google UTM is great for use with analytics, discovering how people are navigating through your site, where they are entering, where they are leaving, and general website stats.  However it can be quite involved when trying to retrieve the many values and parameters from the visitor's browser.  Additionally it is difficult to get multiple lead sources from Google UTM and if not done correctly, can seriously compromise the data in Analytics.  Our best practice is to keep traffic behavior (analytics) and lead source attribution separate.
+
 
 = How do I retrieve the lead sources when the visitor registers / orders? =
 
@@ -64,7 +85,7 @@ and ldsrc_n is the last campaign the visitor ever saw.
 
 In the Pro and Enterprise editions, you can retrieve 
 
-the first (ldsrc_0), last (ldsrc_n) and everything in between (ldsrc_1 .. ldsrc_999) for multiple pages on your website.
+the first (ldsrc_0), last (ldsrc_n) and everything in between (ldsrc_1 .. ldsrc_999) for multiple pages on your website.  You can find more information at http://www.leadsourcetracker.com
 
 
 
