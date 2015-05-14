@@ -63,7 +63,7 @@ Proper examples of tagging the "ldsrc" parameter are:  "Google_Adwords", "Adroll
 
 = Can I use the tags for offline campaigns? =
 
-YES.  The best practice to achieve offline campaign tracking is to offer a special promotion or coupon on a specific page.  For example if you have a print ad on "Popular Computers Magazine" then create the ad with a link for the special giveaway or promo:  http://www.yourwebsite.com/landingpage/?ldsrc=PCMag_Promo_20150401
+YES.  The best practice to achieve offline campaign tracking is to offer a special promotion or coupon on a specific page.  For example if you have a print ad on "Popular Computers Magazine" then create the ad with a link for the special giveaway or promo:  http://www.yourwebsite.com/landingpage/?ldsrc=PCMag_Promo20150401
 
 
 = I'm using Google UTM, isn't that better? =
@@ -73,8 +73,11 @@ Google UTM is great for use with analytics, discovering how people are navigatin
 
 = How do I retrieve the lead sources when the visitor registers / orders? =
 
-The lead source information is stored in your visitor's browser every time they come through a campaign.  To retrieve the lead sources, simply go to Settings->LeadSource Tracker and select the page (usually your order form or registration page) and click save.  This page will retrieve the lead sources 
-and populate the URL with GET parameters.  In your contact form, populate hidden fields with the GET parameters that show up in the URL: 
+The lead source information is stored in your visitor's browser every time they come through a campaign.  To retrieve the lead sources, simply go to Settings->LeadSource Tracker and select the page (usually your order form or registration page) and click save.  This page will retrieve the lead sources and populate the URL with GET parameters.  In your contact form, populate hidden fields with the GET parameters that show up in the URL. 
+
+First, check to see if your contact form plugin already supports pulling in GET parameter tags from the URL (like Gravity Forms).  If it does, then simply map the ldsrc_0 (first first touch) and/or ldsrc_n (for last touch) GET variables into hidden fields.  Remember to map these to your CRM as well.
+
+If you are using a custom PHP form, then include the following the page your specified in Settings->LeadSource Tracker:
 
 &lt;input type="hidden" name="first_source" value="&lt;?php echo $_GET['ldsrc_0'];?&gt;">
 &lt;input type="hidden" name="last_source" value="&lt;?php echo $_GET['ldsrc_n'];?&gt;">
