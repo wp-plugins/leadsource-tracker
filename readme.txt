@@ -4,7 +4,7 @@ Donate link: http://www.leadsourcetracker.com
 Requires at least: 3.7
 Tested up to: 4.2.2
 Stable tag: trunk
-Tags: lead source, leadsource, multiple lead source, marketing attribution, campaign attribution, lead source attribution
+Tags: lead source, leadsource, multiple lead source, marketing attribution, campaign attribution, lead source attribution, lead management, sales tracking, deal tracking, opportunity tracking, salesforce tracking, cookie tracking, persistent tracking, visitor tracking, lead tracking, visitor cookie
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
